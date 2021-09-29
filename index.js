@@ -9,7 +9,7 @@ const app = express();
 
 const PORT = process.env.PORT || 5000;
 
-const corsOptions = { origin: true };
+const corsOptions = { origin: true, credentials: true };
 
 app.use(cors(corsOptions));
 app.use(express.json());
