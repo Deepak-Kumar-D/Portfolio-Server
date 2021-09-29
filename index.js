@@ -14,6 +14,10 @@ const corsOptions = { origin: true, credentials: true };
 app.use(cors(corsOptions));
 app.use(express.json());
 
+app.get("/", (req, res) => {
+  res.json("Running node server.");
+});
+
 app.post("/connect", (req, res) => {
   const { name, email, message } = req.body;
 
